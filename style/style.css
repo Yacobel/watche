@@ -1,0 +1,720 @@
+body{
+  scroll-behavior: smooth;
+  transition: 0.5s ease;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "kanit";
+  transition: 0.5s ease;
+}
+
+.maine-container nav {
+  position: fixed;
+
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  z-index: 1;
+  padding: 20px 40px;
+}
+
+.maine-container nav ul li {
+  padding: 10px 20px;
+}
+.maine-container nav ul li a {
+  color: #777;
+  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.maine-container nav ul li a:hover {
+  color: white;
+}
+
+.maine-container nav ul .logo a {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.maine-container nav .left-nav {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+.maine-container nav .left-nav .nav-sections {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.maine-container nav .rh-nav .nav-sections {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.frist-section {
+  position: relative;
+  height: 100vh;
+}
+.frist-section::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 60%;
+  left: 0;
+  top: 0;
+  border-top-right-radius: 400px;
+  border-bottom-right-radius: 400px;
+  background-color: black;
+}
+.frist-section::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 40%;
+  right: 0;
+  top: 0;
+  border-top-left-radius: 400px;
+  border-bottom-left-radius: 400px;
+  background-color: black;
+}
+.frist-section .watche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  height: 600px;
+  left: 61%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  animation: main 5s ease infinite;
+}
+.frist-section .watche img {
+  height: 500px;
+}
+@keyframes main {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    left: 61%;
+    top: 50%;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    left: 61%;
+    top: 50%;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    left: 61%;
+    top: 50%;
+  }
+}
+.frist-section .secend-watch {
+  position: absolute;
+  z-index: 1;
+  left: 75%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: left 4s ease infinite;
+}
+.frist-section .therd-watch {
+  z-index: 1;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: rh 4s ease infinite;
+}
+.frist-section .therd-watch img {
+  height: 380px;
+}
+@keyframes left {
+  0% {
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes rh {
+  0% {
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.info-frist-section {
+  position: absolute;
+  width: 30%;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.info-frist-section .info {
+  padding: 20px;
+}
+.info-frist-section .info h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+  color: white;
+}
+.info-frist-section .info h2 {
+  font-size: 90px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 3px white;
+  position: relative;
+}
+.info-frist-section .info h2::after,
+.info-frist-section .info h2::before {
+  position: absolute;
+  content: attr(data-text);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: black;
+  overflow: hidden;
+}
+.info-frist-section .info h2::before {
+  left: 3px;
+  text-shadow: -5px 0 red;
+  animation: gl-1 2s linear reverse infinite;
+}
+.info-frist-section .info h2::after {
+  left: -3px;
+  text-shadow: -5px 0 blue;
+  animation: gl-2 2s linear reverse infinite;
+}
+@keyframes gl-1 {
+  0% {
+    clip: rect(132px, auto, 101px, 30px);
+  }
+  5% {
+    clip: rect(17px, auto, 94px, 30px);
+  }
+  10% {
+    clip: rect(40px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(87px, auto, 82px, 30px);
+  }
+  20% {
+    clip: rect(137px, auto, 61px, 30px);
+  }
+  25% {
+    clip: rect(34px, auto, 14px, 30px);
+  }
+  30% {
+    clip: rect(133px, auto, 74px, 30px);
+  }
+  35% {
+    clip: rect(76px, auto, 107px, 30px);
+  }
+  40% {
+    clip: rect(59px, auto, 130px, 30px);
+  }
+  45% {
+    clip: rect(29px, auto, 84px, 30px);
+  }
+  50% {
+    clip: rect(22px, auto, 67px, 30px);
+  }
+  55% {
+    clip: rect(67px, auto, 62px, 30px);
+  }
+  60% {
+    clip: rect(10px, auto, 105px, 30px);
+  }
+  65% {
+    clip: rect(78px, auto, 115px, 30px);
+  }
+  70% {
+    clip: rect(105px, auto, 13px, 30px);
+  }
+  75% {
+    clip: rect(15px, auto, 75px, 30px);
+  }
+  80% {
+    clip: rect(66px, auto, 39px, 30px);
+  }
+  85% {
+    clip: rect(133px, auto, 73px, 30px);
+  }
+  90% {
+    clip: rect(36px, auto, 128px, 30px);
+  }
+  95% {
+    clip: rect(68px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(14px, auto, 100px, 30px);
+  }
+}
+@keyframes gl-2 {
+  0% {
+    clip: rect(129px, auto, 36px, 30px);
+  }
+  5% {
+    clip: rect(36px, auto, 4px, 30px);
+  }
+  10% {
+    clip: rect(85px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(91px, auto, 91px, 30px);
+  }
+  20% {
+    clip: rect(148px, auto, 138px, 30px);
+  }
+  25% {
+    clip: rect(38px, auto, 122px, 30px);
+  }
+  30% {
+    clip: rect(69px, auto, 54px, 30px);
+  }
+  35% {
+    clip: rect(98px, auto, 71px, 30px);
+  }
+  40% {
+    clip: rect(146px, auto, 34px, 30px);
+  }
+  45% {
+    clip: rect(134px, auto, 43px, 30px);
+  }
+  50% {
+    clip: rect(102px, auto, 80px, 30px);
+  }
+  55% {
+    clip: rect(119px, auto, 44px, 30px);
+  }
+  60% {
+    clip: rect(106px, auto, 99px, 30px);
+  }
+  65% {
+    clip: rect(141px, auto, 74px, 30px);
+  }
+  70% {
+    clip: rect(20px, auto, 78px, 30px);
+  }
+  75% {
+    clip: rect(133px, auto, 79px, 30px);
+  }
+  80% {
+    clip: rect(78px, auto, 52px, 30px);
+  }
+  85% {
+    clip: rect(35px, auto, 39px, 30px);
+  }
+  90% {
+    clip: rect(67px, auto, 70px, 30px);
+  }
+  95% {
+    clip: rect(71px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(83px, auto, 40px, 30px);
+  }
+}
+
+.info-frist-section .info .paricing p {
+  font-size: 20px;
+  color: #777;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.info-frist-section .info .paricing span {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  padding: 20px;
+}
+.section-nav ul {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+}
+.section-nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-nav ul li a {
+  font-size: 18px;
+  padding: 10px 0px;
+  color: #777;
+}
+.section-nav ul li a:hover {
+  color: white;
+}
+.footer-frist-section {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 40px;
+  width: 100%;
+}
+.footer-frist-section ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-frist-section ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.footer-frist-section ul .explor i {
+  color: white;
+  margin-left: 20px;
+  animation: up 0.5s ease infinite;
+}
+
+.footer-frist-section ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  padding: 10px 0px;
+  color: #777;
+  z-index: 1;
+}
+.footer-frist-section ul li a span {
+  display: block;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.footer-frist-section ul li a:hover {
+  color: white;
+}
+.footer-frist-section .social {
+  gap: 20px;
+}
+@keyframes up {
+  0% {
+    margin-top: 10px;
+  }
+  25% {
+    margin-top: 5px;
+  }
+  50% {
+    margin-top: 0;
+  }
+  75% {
+    margin-top: -5px;
+  }
+  100% {
+    margin-top: -10px;
+  }
+}
+@media (max-width: 992px) {
+  .frist-section {
+    height: 200vh;
+  }
+  .frist-section::after {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .frist-section::before {
+    display: none;
+  }
+  .maine-container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  .section-nav ul {
+    top: 25%;
+  }
+  .frist-section .watche {
+    left: 50%;
+    top: 25%;
+    animation: main1 5s ease infinite;
+  }
+  @keyframes main1 {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      left: 50%;
+      top: 25%;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.1);
+      left: 50%;
+      top: 25%;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      left: 50%;
+      top: 25%;
+    }
+  }
+
+  .frist-section .secend-watch {
+    top: 25%;
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: left1 4s ease infinite;
+  }
+  .frist-section .therd-watch {
+    left: 25%;
+    top: 25%;
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rh 4s ease infinite;
+  }
+  @keyframes left1 {
+    0% {
+      left: 75%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      left: 25%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      left: 75%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  @keyframes rh {
+    0% {
+      left: 25%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      left: 75%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      left: 25%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .info-frist-section {
+    width: 100%;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+.shopping-section {
+  padding: 50px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.title {
+  padding: 50px 20px;
+}
+.title h1 {
+  font-size: 50px;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.5s ease;
+}
+.title h1::before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 100%;
+  background-color: #777;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease;
+  z-index: -1;
+  border-radius: 20px;
+}
+.title:hover.title h1::before {
+  height: 100%;
+}
+.title:hover.title h1 {
+  color: black;
+}
+
+.filter-products{
+  padding: 30px 20px ;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.filter-products button{
+  padding: 8px 20px ;
+  color: black;
+  background-color: white;
+  font-size: 20px ;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 10px;
+  width: 120px;
+  cursor: pointer;
+}
+.shopping-section .all-cardes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.shopping-section .carde {
+  background-color: #121212;
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px;
+  border-radius: 20px;
+  transition: 0.5s ease;
+}
+.shopping-section .carde:hover{
+  scale: 1.1;
+}
+.shopping-section .carde .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shopping-section .carde .image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.shopping-section .carde .info {
+  width: 100%;
+  text-align: start;
+}
+.shopping-section .carde .info .rate-warche p {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: white;
+}
+.shopping-section .carde .info span {
+  font-weight: bold;
+  color: white;
+}
+.shopping-section .carde .info span:nth-child(3) {
+  text-decoration: line-through;
+  margin-left: 10px;
+  font-weight: 400;
+  color: #777;
+}
+.shopping-section .carde .info .icons .starse i {
+  color: gold;
+}
+.shopping-section .carde .info .icons .arw {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopping-section .carde .info .icons .arw:hover.arw i {
+}
+.shopping-section .carde .info .icons .arw p {
+  font-weight: normal;
+  text-transform: lowercase;
+}
+.shopping-section .carde .info .icons .arw i {
+  color: white;
+}
+.shopping-section .buton button {
+  padding: 8px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: black;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 22px;
+  transition: 0.5s ease;
+}
+
+.shopping-section .buton button:hover {
+  background-color: white;
+  color: black;
+  border-color: #777;
+}
